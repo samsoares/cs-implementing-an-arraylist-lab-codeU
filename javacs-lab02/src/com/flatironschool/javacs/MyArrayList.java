@@ -63,12 +63,13 @@ public class MyArrayList<E> implements List<E> {
 			throw new IndexOutOfBoundsException();
 		}
 		
-		for (int i = size-1; i >= index; i--){
-			array[i] = array[i+1]; 
+		add(element); 
+		
+		for (int i = size-1; i > index; i--){
+			array[i] = array[i-1]; 
 		}
 		
 		array[index] = element; 
-		size++; 
 	}
 
 	@Override
